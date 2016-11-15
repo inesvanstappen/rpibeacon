@@ -4,5 +4,5 @@ Bleacon.startScanning(); // scan for any bleacons
 
 Bleacon.on('discover', function(bleacon) {
     // ...
-    console.log("Found a beacon");
+    console.log("Found a beacon " + bleacon);
 });
