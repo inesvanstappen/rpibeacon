@@ -1,21 +1,12 @@
 var Bleacon = require('bleacon');
+var PiInfo = require('piinfo');
 
 Bleacon.startScanning(); // scan for any bleacons
 
 Bleacon.on('discover', function (bleacon) {
     // ...
     var currentdate = new Date();
-
-    const exec = require( 'child_process' ).exec;
-    var rpiSerial;
-    exec('cat /proc/cpuinfo | grep Serial',(error,stdout,stderr) => {
-        if(error){
-            console.error( `exec error: ${error}` );
-            return;
-        }
-        rpiSerial = `stdout: ${stdout}`;// this is your RPI serial number
-        console.log( `stderr: ${stderr}` );
-    });
+    console.log(PiInfo.serial());
 
     var datetime = "Last Sync: " + currentdate.getDate() + "/"
         + (currentdate.getMonth() + 1) + "/"
