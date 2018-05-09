@@ -2,7 +2,14 @@ var Bleacon = require('bleacon');
 
 Bleacon.startScanning(); // scan for any bleacons
 
-Bleacon.on('discover', function(bleacon) {
+Bleacon.on('discover', function (bleacon) {
     // ...
-    console.log("Found a beacon " + JSON.stringify(bleacon));
+    var datetime = "Last Sync: " + currentdate.getDate() + "/"
+        + (currentdate.getMonth() + 1) + "/"
+        + currentdate.getFullYear() + " @ "
+        + currentdate.getHours() + ":"
+        + currentdate.getMinutes() + ":"
+        + currentdate.getSeconds();
+
+    console.log("Found a beacon\n" + JSON.stringify(bleacon) + '\n'+ datetime);
 });
