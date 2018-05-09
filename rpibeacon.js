@@ -6,7 +6,7 @@ Bleacon.startScanning(); // scan for any bleacons
 Bleacon.on('discover', function (bleacon) {
     // ...
     var currentdate = new Date();
-    console.log(PiInfo.serial());
+    var serialNumber = PiInfo.serial();
 
     var datetime = "Last Sync: " + currentdate.getDate() + "/"
         + (currentdate.getMonth() + 1) + "/"
@@ -15,5 +15,5 @@ Bleacon.on('discover', function (bleacon) {
         + currentdate.getMinutes() + ":"
         + currentdate.getSeconds();
 
-    // console.log('Found a beacon\n' + '\n' + JSON.stringify(bleacon) + '\n'+ datetime);
+    console.log('Found a beacon\n' + '\n' + JSON.stringify(bleacon) + '\n'+ datetime);
 });
