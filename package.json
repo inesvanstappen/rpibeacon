@@ -1,0 +1,17 @@
+{
+    "name": "rpibeacon",
+    "version": "1.0.0",
+    "dependencies": {
+        "bignum": "0.11.0",
+        "bleacon": "0.5.1",
+        "bleno": "0.4.2",
+        "bluetooth-hci-socket": "0.5.1",
+        "bplist-parser": "0.0.6",
+        "debug": "2.6.9",
+        "ms": "2.0.0",
+        "nan": "2.10.0",
+        "noble": "1.9.1",
+        "noble-device": "1.4.1",
+        "node-beacon-scanner": "0.0.2"
+    }
+}
