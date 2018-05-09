@@ -15,5 +15,5 @@ Bleacon.on('discover', function (bleacon) {
         + currentdate.getMinutes() + ":"
         + currentdate.getSeconds();
 
-    console.log('Found a beacon\n' + '\n' + JSON.stringify(bleacon) + '\n'+ datetime);
+    console.log('\n\nFound a beacon\n'  + JSON.stringify(bleacon) + '\n'+ datetime);
 });
