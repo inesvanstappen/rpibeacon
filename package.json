@@ -12,6 +12,7 @@
         "nan": "2.10.0",
         "noble": "1.9.1",
         "noble-device": "1.4.1",
-        "node-beacon-scanner": "0.0.2"
+        "node-beacon-scanner": "0.0.2",
+        "piinfo": "0.0.2"
     }
 }
