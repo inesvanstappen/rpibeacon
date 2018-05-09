@@ -7,7 +7,7 @@ Bleacon.on('discover', function (bleacon) {
     var currentdate = new Date();
 
     const exec = require( 'child_process' ).exec;
-    const rpiSerial;
+    var rpiSerial;
     exec('cat /proc/cpuinfo | grep Serial',(error,stdout,stderr) => {
         if(error){
             console.error( `exec error: ${error}` );
